@@ -4,10 +4,10 @@ import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
-header = st.beta_container()
-dataset = st.beta_container()
-features = st.beta_container()
-model_training = st.beta_container()
+header = st.container()
+dataset = st.container()
+features = st.container()
+model_training = st.container()
 
 
 st.markdown(
@@ -59,7 +59,7 @@ with model_training:
 	st.header('Time to train the model!')
 	st.text('Here you get to choose the hyperparameters of the model and see how the performance changes!')
 
-	sel_col, disp_col = st.beta_columns(2)
+	sel_col, disp_col = st.columns(2)
 
 	max_depth = sel_col.slider('What should be the max_depth of the model?', min_value=10, max_value=100, value=20, step=10)
 
